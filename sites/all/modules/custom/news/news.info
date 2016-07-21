@@ -1,0 +1,6 @@
+name = News Module
+description = News Module Workshop
+package = Workshop Modules
+core = 7.x
+files[] = news.install
+files[] = news.module

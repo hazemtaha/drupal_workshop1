@@ -1,0 +1,163 @@
+<?php
+
+function news_install() {
+	node_types_rebuild();
+	$types = node_type_get_types();
+	node_add_body_field($types['news']);
+	add_vocabulary();
+	add_terms();
+	add_custom_field();
+}
+
+function news_uninstall() {
+	$ournewtype = 'news';
+	$sql = 'SELECT nid FROM {node} n WHERE n.type = :type';
+	$result = db_query($sql, array(':type' => $ournewtype));
+	$nodeids = array();
+	foreach ($result as $row) {
+		$nodeids[] = $row->nid;
+	}
+	node_delete_multiple($nodeids);
+	delete_custom_fields();
+	node_type_delete($ournewtype);
+	field_purge_batch(500);
+}
+
+function add_vocabulary() {
+	$t = get_t();
+	$description = $t('Enter a comma seperated list of words to describe your article');
+	$vocabulary = (object) array(
+		'name' => 'Tags',
+		'description' => $description,
+		'machine_name' => 'custom_tags',
+	);
+	taxonomy_vocabulary_save($vocabulary);
+}
+
+function add_terms() {
+	$vocabulary = taxonomy_vocabulary_machine_name_load('custom_tags');
+	$terms = array('Technology', 'Sports', 'Education', 'Politics', 'Medical', 'Crime');
+	foreach ($terms as $term) {
+		$newterm = new stdClass();
+		$newterm->name = $term; // The name of the term
+		$newterm->vid = $vocabulary->vid; // The ID of the parent vocabulary
+		taxonomy_term_save($newterm);
+	}
+}
+function delete_custom_fields() {
+	foreach (array_keys(_news_installed_fields()) as $field) {
+		field_delete_field($field);
+	}
+	$instances = field_info_instances('node', 'news');
+	foreach ($instances as $instance_name => $field_instance) {
+		field_delete_instance($field_instance);
+	}
+}
+
+function _news_installed_fields() {
+	$t = get_t();
+	$vocabulary = taxonomy_vocabulary_machine_name_load('custom_tags');
+	return array(
+		'news_tagging' => array(
+			'field_name' => 'news_' . $vocabulary->machine_name,
+			'label' => $t('Tags'),
+			'type' => 'taxonomy_term_reference',
+			'cardinality' => FIELD_CARDINALITY_UNLIMITED,
+			'settings' => array(
+				'allowed_values' => array(
+					array(
+						'vocabulary' => $vocabulary->machine_name,
+						'parent' => 0,
+					),
+				),
+			),
+		),
+		'news_image' => array(
+			'field_name' => 'news_image',
+			'type' => 'image',
+			'cardinality' => 1,
+			'translatable' => True,
+			'indexes' => array('fid' => array('fid')),
+			'settings' => array(
+				'uri_scheme' => 'public',
+				'default_image' => False,
+			),
+			'storage' => array(
+				'type' => 'field_sql_storage',
+				'settings' => array(),
+			),
+		),
+	);
+}
+
+function _news_installed_instances() {
+	$t = get_t();
+	$vocabulary = taxonomy_vocabulary_machine_name_load('custom_tags');
+	return array(
+		'news_tagging' => array(
+			'field_name' => 'news_' . $vocabulary->machine_name,
+			'label' => $vocabulary->name,
+			'description' => $vocabulary->description,
+			'type' => 'taxonomy_term_reference',
+			'widget' => array(
+				'type' => 'taxonomy_autocomplete',
+			),
+			'display' => array(
+				'default' => array(
+					'label' => $t('Tags'),
+					'type' => 'taxonomy_term_reference_link',
+					'weight' => 10,
+				),
+				'teaser' => array(
+					'type' => 'taxonomy_term_reference_link',
+					'weight' => 10,
+				),
+			),
+		),
+		'news_image' => array(
+			'field_name' => 'news_image',
+			'label' => 'Image',
+			'description' => 'Any related pictures to show',
+			'settings' => array(
+				'file_directory' => 'field/image',
+				'file_extensions' => 'png gif jpg jpeg',
+				'max_filesize' => '',
+				'max_resolution' => '640x480',
+				'min_resolution' => '',
+				'alt_field' => True,
+				'title_field' => '',
+			),
+			'widget' => array(
+				'type' => 'image_image',
+				'settings' => array(
+					'progress_indicator' => 'throbber',
+					'preview_image_style' => 'thumbnail',
+				),
+			),
+			'weight' => -1,
+			'display' => array(
+				'default' => array(
+					'label' => 'hidden',
+					'type' => 'image__large',
+					'weight' => -1,
+				),
+				'teaser' => array(
+					'label' => 'hidden',
+					'type' => 'image_link_content__medium',
+					'weight' => -1,
+				),
+			),
+		),
+	);
+}
+
+function add_custom_field() {
+	foreach (_news_installed_fields() as $field) {
+		field_create_field($field);
+	}
+	foreach (_news_installed_instances() as $field_instance) {
+		$field_instance['entity_type'] = 'node';
+		$field_instance['bundle'] = 'news';
+		field_create_instance($field_instance);
+	}
+}

@@ -1,0 +1,18 @@
+<?php
+
+function news_node_info() {
+	return array(
+		'news' => array(
+			'name' => 'News',
+			'base' => 'news',
+			'description' => t('News Content Type'),
+			'has_title' => True,
+			'title_label' => t('News Title'),
+		),
+	);
+}
+
+function news_form($node, $form_state) {
+	return node_content_form($node, $form_state);
+}
+
