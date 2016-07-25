@@ -1,5 +1,5 @@
 <?php
-
+ 
 function news_node_info() {
 	return array(
 		'news' => array(
@@ -16,3 +16,17 @@ function news_form($node, $form_state) {
 	return node_content_form($node, $form_state);
 }
 
+// function news_views_api() {
+// 	return array(
+// 		'api' => '3.0',
+// 	);
+// }
+
+// function news_views_default_views() {
+// 	$path = drupal_get_path('module', 'news') . '/views/*.inc';
+// 	$views = array();
+// 	foreach (glob($path) as $views_filename) {
+// 		require_once($views_filename);
+// 	}
+// 	return $views;
+// }
