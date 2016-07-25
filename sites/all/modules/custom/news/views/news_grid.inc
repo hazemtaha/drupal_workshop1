@@ -270,4 +270,4 @@ $handler->display->display_options['menu']['name'] = 'main-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
 
-$view[$view->name] = $view;
+$views[$view->name] = $view;
