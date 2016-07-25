@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 $view = new view();
 $view->name = 'news_view';
 $view->description = '';
@@ -269,5 +270,6 @@ $handler->display->display_options['menu']['weight'] = '5';
 $handler->display->display_options['menu']['name'] = 'main-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
+
 
 $views[$view->name] = $view;
