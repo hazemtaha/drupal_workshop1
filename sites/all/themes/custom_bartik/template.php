@@ -184,3 +184,11 @@ function custom_bartik_field__taxonomy_term_reference($variables) {
 
 	return $output;
 }
+/*
+ * overrides view field template view
+ */
+// function custom_bartik_views_view_field__news_view__page__title($variables) {
+// 	kpr($variables);
+// 	// template\
+// 	return $variables['output'];
+// }
