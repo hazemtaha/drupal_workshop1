@@ -28,10 +28,6 @@
  */
 ?>
 <?php
-// module_load_include('inc', 'node', 'node.pages');
-// $form = node_add('news');
-// $output = drupal_render($form);
-// print $output;
 print l(t('Add News'), 'news/normal_add');
 ?>
 <hr>
