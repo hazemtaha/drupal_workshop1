@@ -107,6 +107,8 @@ print render($content);
   <hr>
 <div>
   <?php print l("Edit", 'news/normal_edit/' . $node->nid);?>
+  |
+  <?php print l("Delete", 'news/normal_delete/' . $node->nid);?>
 </div>
   <?php
 // Remove the "Add new comment" link on the teaser page or if the comment

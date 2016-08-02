@@ -24,9 +24,19 @@ function news_menu() {
 	);
 	$items['news/normal_edit/%node'] = array(
 		'type' => MENU_CALLBACK,
-		'title' => t('Add News'),
-		'description' => 'News Publishing Page',
+		'title' => t('Edit News'),
+		'description' => 'News Edit Page',
 		'page callback' => 'news_normal_edit',
+		'page arguments' => array(2),
+		'access callback' => True,
+		// 'access callback' => 'user_access',
+		// 'access arguments' => array('access content'),
+	);	
+	$items['news/normal_delete/%node'] = array(
+		'type' => MENU_CALLBACK,
+		'title' => t('Delete News'),
+		'description' => 'News Deletion Page',
+		'page callback' => 'news_normal_delete',
 		'page arguments' => array(2),
 		'access callback' => True,
 		// 'access callback' => 'user_access',
@@ -43,17 +53,16 @@ function news_normal_add() {
 
 function news_normal_edit($node) {
 	module_load_include('inc', 'node', 'node.pages');
-	// $node->content['edit-form'] = array(
-	// 	'#markup' => render(node_page_edit($node)),
-	// 	'#weight' => 10,
-	// );
 	$edit_form = node_page_edit($node);
 	return drupal_render($edit_form);
 }
 
-function news_node_view($node, $view_mode, $langcode) {
-
+function news_normal_delete($node) {
+	node_delete($node->nid);
+	drupal_goto('my-news');
 }
+
+
 function news_form($node, $form_state) {
 	return node_content_form($node, $form_state);
 }
