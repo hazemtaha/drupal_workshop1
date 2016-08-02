@@ -1,5 +1,5 @@
 <?php
- 
+
 function news_node_info() {
 	return array(
 		'news' => array(
@@ -10,6 +10,25 @@ function news_node_info() {
 			'title_label' => t('News Title'),
 		),
 	);
+}
+
+function news_menu() {
+	$items['news/normal_add'] = array(
+		'type' => MENU_CALLBACK,
+		'title' => t('Add News'),
+		'description' => 'News Publishing Page',
+		'page callback' => 'news_normal_add',
+		'access callback' => True,
+		// 'access callback' => 'user_access',
+		// 'access arguments' => array('access content'),
+	);
+	return $items;
+}
+
+function news_normal_add() {
+	module_load_include('inc', 'node', 'node.pages');
+	$form = node_add('news');
+	return drupal_render($form);
 }
 
 function news_form($node, $form_state) {
@@ -26,7 +45,7 @@ function news_views_default_views() {
 	$path = drupal_get_path('module', 'news') . '/views/*.inc';
 	$views = array();
 	foreach (glob($path) as $views_filename) {
-		require_once($views_filename);
+		require_once $views_filename;
 	}
 	return $views;
 }
