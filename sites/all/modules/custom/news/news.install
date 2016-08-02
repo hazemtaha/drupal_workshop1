@@ -19,8 +19,10 @@ function news_uninstall() {
 	}
 	node_delete_multiple($nodeids);
 	delete_custom_fields();
+	delete_vocabulary();
 	node_type_delete($ournewtype);
 	field_purge_batch(500);
+	dpm('Entered');
 }
 
 function add_vocabulary() {
@@ -32,6 +34,11 @@ function add_vocabulary() {
 		'machine_name' => 'custom_tags',
 	);
 	taxonomy_vocabulary_save($vocabulary);
+}
+
+function delete_vocabulary() {
+	$vocabulary = taxonomy_vocabulary_machine_name_load('custom_tags');
+	taxonomy_vocabulary_delete($vocabulary->vid);
 }
 
 function add_terms() {
@@ -87,6 +94,18 @@ function _news_installed_fields() {
 				'settings' => array(),
 			),
 		),
+		'news_user_reference' => array(
+			'field_name' => 'news_user_reference',
+			'type' => 'user_reference',
+			'cardinality' => 1,
+			'translatable' => False,
+			'settings' => array(
+				'referenceable_status' => array(
+					0 => 0,
+					1 => '1',
+					),
+				),
+			),
 	);
 }
 
@@ -148,6 +167,21 @@ function _news_installed_instances() {
 				),
 			),
 		),
+		'news_user_reference' => array(
+			'field_name' => 'news_user_reference',
+			'label' => $t('User Tagging'),
+			'required' => False,
+			'widget' => array(
+				'active' => 1,
+				'module' => 'user_reference',
+				'settings' => array(
+					'apply_chosen' => '',
+					),
+				'type' => 'user_reference_autocomplete',
+				'weight' => '10',
+				),
+			'display' => array(),
+			),
 	);
 }
 

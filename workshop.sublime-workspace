@@ -1,0 +1,551 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fiel",
+				"field_tags	(core.entity_view_display.node.news.teaser.yml)"
+			],
+			[
+				"field",
+				"field_image	(core.entity_view_display.node.news.teaser.yml)"
+			],
+			[
+				"fie",
+				"field_tags	(core.entity_view_display.node.news.default.yml)"
+			],
+			[
+				"field_",
+				"field_image	(core.entity_form_display.node.news.default.yml)"
+			],
+			[
+				"json_",
+				"json_encode〔function〕"
+			],
+			[
+				"json",
+				"json_encode〔function〕"
+			],
+			[
+				"varia",
+				"variable_get	variable_get"
+			],
+			[
+				"variable_set",
+				"variable_set〔function〕"
+			],
+			[
+				"enti",
+				"entity_reference"
+			],
+			[
+				"entity",
+				"entityManager〔function〕"
+			],
+			[
+				"insta",
+				"$instances〔variable〕"
+			],
+			[
+				"isse",
+				"isset〔function〕"
+			],
+			[
+				"term",
+				"$term〔variable〕"
+			],
+			[
+				"vo",
+				"vocabularies"
+			],
+			[
+				"load",
+				"loadMultiple〔function〕"
+			],
+			[
+				"Fiel",
+				"FieldConfig〔class〕"
+			],
+			[
+				"fi",
+				"$field_storage〔variable〕"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"wid",
+				"widgets	(views-exposed-form.tpl.php)"
+			],
+			[
+				"widg",
+				"widgets"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"custom",
+				"custom_widget	(custom_bartik_overrides.css)"
+			],
+			[
+				"print",
+				"print_r〔function〕"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"requi",
+				"require_once〔keyword〕"
+			],
+			[
+				"news_",
+				"news_image	(news.install)"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"add",
+				"add_terms"
+			],
+			[
+				"new",
+				"newterm"
+			],
+			[
+				"entit",
+				"entity_type"
+			],
+			[
+				"taxonomy_vo",
+				"taxonomy_vocabulary_save	taxonomy_vocabulary_save"
+			],
+			[
+				"field_pu",
+				"field_purge_batch	field_purge_batch"
+			],
+			[
+				"field_delete",
+				"field_delete_instance	field_delete_instance"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"field_create_",
+				"field_create_instance	field_create_instance"
+			],
+			[
+				"_new",
+				"_news_installed_instances"
+			],
+			[
+				"_",
+				"_news_installed_fields"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"node_type_get_t",
+				"node_type_get_types	node_type_get_types"
+			],
+			[
+				"node_type_get",
+				"node_type_get_type	node_type_get_type"
+			],
+			[
+				"node_type",
+				"node_types_rebuild	node_types_rebuild"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 92.0,
+		"last_filter": "Package Control: insta",
+		"selected_items":
+		[
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"format",
+				"phpfmt: format now"
+			],
+			[
+				"phpfmt:fo",
+				"phpfmt: format now"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/html/drupal-7.50/profiles",
+		"/var/www/html/drupal-7.50/profiles/standard",
+		"/var/www/html/drupal-7.50/sites",
+		"/var/www/html/drupal-7.50/sites/all",
+		"/var/www/html/drupal-7.50/sites/all/modules",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/features",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/news",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/site_configuration",
+		"/var/www/html/drupal-7.50/sites/all/themes",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/css",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/templates",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Config",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Config/Entity",
+		"/var/www/html/drupal-8.x/core/modules",
+		"/var/www/html/drupal-8.x/core/modules/field_ui",
+		"/var/www/html/drupal-8.x/core/modules/field_ui/src",
+		"/var/www/html/drupal-8.x/core/modules/field_ui/src/Form",
+		"/var/www/html/drupal-8.x/core/modules/node",
+		"/var/www/html/drupal-8.x/core/modules/node/config",
+		"/var/www/html/drupal-8.x/modules/custom/features",
+		"/var/www/html/drupal-8.x/modules/custom/news",
+		"/var/www/html/drupal-8.x/modules/custom/news/config",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install",
+		"/var/www/html/drupal-8.x/modules/examples/content_entity_example/src",
+		"/var/www/html/drupal-8.x/modules/examples/content_entity_example/src/Entity/Controller",
+		"/var/www/html/drupal-8.x/modules/examples/field_example/config",
+		"/var/www/html/drupal-8.x/modules/examples/field_example/src",
+		"/var/www/html/drupal-8.x/modules/examples/node_type_example",
+		"/var/www/html/drupal-8.x/modules/features/config"
+	],
+	"file_history":
+	[
+		"/var/www/html/drupal-8.x/modules/custom/news/news.install",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/core.entity_view_display.node.news.default.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/core.entity_view_display.node.news.teaser.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/field.field.node.news.field_tags.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/views.view.news_listing.yml",
+		"/var/www/html/drupal-8.x/modules/custom/features/feature_news/config/install/core.entity_view_display.node.news.teaser.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/core.entity_form_display.node.news.default.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/core.entity_view_display.node.news.full.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/taxonomy.vocabulary.news_tags.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/field.field.node.news.field_news_tags.yml",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Config/UnmetDependenciesException.php",
+		"/var/www/html/drupal-8.x/modules/custom/features/feature_news/config/install/node.type.news.yml",
+		"/var/www/html/drupal-8.x/modules/custom/features/feature_news/config/install/core.entity_form_display.node.news.default.yml",
+		"/var/www/html/drupal-8.x/modules/custom/features/feature_news/config/install/core.entity_view_display.node.news.default.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/taxonomy.vocabulary.tags.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/field.field.node.news.field_image.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/news.install",
+		"/var/www/html/drupal-8.x/modules/custom/news/config/install/node.type.news.yml",
+		"/var/www/html/drupal-8.x/core/modules/node/node.module",
+		"/var/www/html/drupal-8.x/modules/custom/news/news.routing.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news/news.info.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/config/install/node.type.news.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/config/install/news.install",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/config/install/field.field.node.news.body.yml",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/news.module",
+		"/var/www/html/drupal-8.x/modules/custom/news_old/news.info.yml",
+		"/var/www/html/drupal-8.x/core/modules/field/src/Entity/FieldStorageConfig.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Component/DependencyInjection/Container.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Entity/EntityTypeManager.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Entity/EntityStorageBase.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Entity/EntityManager.php",
+		"/var/www/html/drupal-8.x/core/includes/bootstrap.inc",
+		"/var/www/html/drupal-8.x/vendor/symfony/http-kernel/HttpKernel.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/StackMiddleware/Session.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Config/Entity/ConfigEntityBase.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Entity/Entity.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/Config/Entity/ConfigEntityStorage.php",
+		"/home/hazemt/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
+		"/home/hazemt/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/var/www/html/drupal-8.x/core/modules/page_cache/src/StackMiddleware/PageCache.php",
+		"/var/www/html/drupal-8.x/core/lib/Drupal/Core/DrupalKernel.php",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/template.php",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/news/views/news_grid.inc",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/news/news.module",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/site_configuration/site_configuration.info",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/site_configuration/site_configuration.install",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/templates/views-exposed-form.tpl.php",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/css/custom_bartik_overrides.css",
+		"/var/www/html/drupal-7.50/workshop.sublime-project",
+		"/var/www/html/drupal-7.50/sites/all/modules/custom/site_configuration/site_configuration.module",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/templates/views-view--news-view--page.tpl.php",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/custom_bartik.info",
+		"/var/www/html/drupal-7.50/sites/all/themes/custom_bartik/templates/views-view-field--news-view--page--title.tpl.php",
+		"/home/hazemt/drupal-7.50/sites/all/modules/custom/news/news.info",
+		"/home/hazemt/drupal-7.50/sites/all/modules/custom/news/news.install",
+		"/home/hazemt/drupal-7.50/sites/all/modules/custom/news/views/news_grid.inc",
+		"/home/hazemt/drupal-7.50/sites/all/modules/custom/news/news.module",
+		"/home/hazemt/drupal-7.50/sites/all/modules/references/README.txt",
+		"/home/hazemt/drupal-7.50/themes/bartik/node--news.tpl.php",
+		"/home/hazemt/drupal-7.50/themes/bartik/template.php",
+		"/home/hazemt/drupal-7.50/themes/bartik/page--type-news.tpl.php",
+		"/home/hazemt/drupal-7.50/sites/default/settings.php",
+		"/home/hazemt/drupal-7.50/sites/all/modules/custom/news/page.tpl.php",
+		"/home/hazemt/drupal-7.50/sites/all/modules/entityreference/plugins/behavior/EntityReferenceBehavior_TaxonomyIndex.class.php",
+		"/home/hazemt/drupal-7.50/profiles/standard/standard.install",
+		"/var/www/html/examples/form_example/form_example.module",
+		"/var/www/html/examples/form_example/form_example_tutorial.inc",
+		"/home/hazemt/.config/sublime-text-3/Packages/phpfmt/phpfmt.sublime-settings",
+		"/home/hazemt/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
+		"/var/www/html/examples/menu_example/menu_example.module"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"/var/www/html/drupal-8.x/modules/custom/news",
+			"/var/www/html/drupal-8.x/core/modules/comment/",
+			"/var/www/html/drupal-8.x/core/modules/node/",
+			"/var/www/html/drupal-8.x/modules/examples",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"news_tags",
+			"depend",
+			"tags",
+			"tags\\",
+			"tags",
+			"default",
+			"create",
+			"CREATE",
+			"node_add_body_field",
+			"fid",
+			"image",
+			"scheme",
+			"save",
+			"configEntityStorag",
+			"news",
+			"taxonomy_vocabulary_machine_name_load",
+			"helloddddddddddddddddddddddddddddddddddd",
+			"bartik",
+			"filter",
+			"بهمفثق",
+			"content",
+			"hide",
+			"target_type",
+			"menu_example_id_load",
+			"_menu_example_mappings",
+			"mapping",
+			"_menu_example_",
+			"file"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"custom_bartik"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "",
+	"project": "workshop.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"field.field.node.news.field_news_tags",
+				"drupal-8.x/modules/custom/news/config/install/field.field.node.news.field_news_tags.yml"
+			],
+			[
+				"unmetdependenciesexception.php",
+				"drupal-8.x/core/lib/Drupal/Core/Config/UnmetDependenciesException.php"
+			],
+			[
+				"referencesread",
+				"drupal-7.50/sites/all/modules/references/README.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"68":
+				{
+					"group": 0,
+					"index": 0
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 474.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
