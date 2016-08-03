@@ -106,9 +106,14 @@ print render($content);
   <br>
   <hr>
 <div>
-  <?php print l("Edit", 'news/normal_edit/' . $node->nid);?>
-  |
-  <?php print l("Delete", 'news/normal_delete/' . $node->nid);?>
+  <?php global $user;?>
+  <?php if ($node->uid == $user->uid or $is_admin): ?>
+
+    <?php print l("Edit", 'news/normal_edit/' . $node->nid);?>
+    |
+    <?php print l("Delete", 'news/normal_delete/' . $node->nid);?>
+
+  <?php endif?>
 </div>
   <?php
 // Remove the "Add new comment" link on the teaser page or if the comment

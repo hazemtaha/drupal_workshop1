@@ -36,3 +36,7 @@
 <?php endforeach;?>
 <br>
 <hr>
+<?php global $user;
+dpm($user);
+
+?>

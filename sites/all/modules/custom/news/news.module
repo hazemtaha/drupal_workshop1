@@ -31,7 +31,7 @@ function news_menu() {
 		'access callback' => True,
 		// 'access callback' => 'user_access',
 		// 'access arguments' => array('access content'),
-	);	
+	);
 	$items['news/normal_delete/%node'] = array(
 		'type' => MENU_CALLBACK,
 		'title' => t('Delete News'),
@@ -52,16 +52,25 @@ function news_normal_add() {
 }
 
 function news_normal_edit($node) {
-	module_load_include('inc', 'node', 'node.pages');
-	$edit_form = node_page_edit($node);
-	return drupal_render($edit_form);
+	global $user;
+	if ($user->uid == $node->uid or in_array('administrator', $user->roles)) {
+		module_load_include('inc', 'node', 'node.pages');
+		$edit_form = node_page_edit($node);
+		return drupal_render($edit_form);
+	} else {
+		drupal_goto('/');
+	}
 }
 
 function news_normal_delete($node) {
-	node_delete($node->nid);
-	drupal_goto('my-news');
+	global $user;
+	if ($user->uid == $node->uid or in_array('administrator', $user->roles)) {
+		node_delete($node->nid);
+		drupal_goto('my-news');
+	} else {
+		drupal_goto('/');
+	}
 }
-
 
 function news_form($node, $form_state) {
 	return node_content_form($node, $form_state);
