@@ -72,6 +72,20 @@ function news_normal_delete($node) {
 	}
 }
 
+function news_form_alter(&$form, &$form_state, $form_id) {
+	if ($form_id == 'news_node_form') {
+		$form['#validate'][] = 'news_form_validate';
+		// dpm($form);
+		$form['news_user_reference']['#access'] = False;
+	}
+}
+
+function news_form_validate($form, &$form_state) {
+	if (strlen($form_state['values']['title']) < 10) {
+		form_set_error('title', t('Title must be more than 10 characters in length'));
+	}
+}
+
 function news_form($node, $form_state) {
 	return node_content_form($node, $form_state);
 }

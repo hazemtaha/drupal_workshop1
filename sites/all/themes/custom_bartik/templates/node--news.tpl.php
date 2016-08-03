@@ -109,9 +109,9 @@ print render($content);
   <?php global $user;?>
   <?php if ($node->uid == $user->uid or $is_admin): ?>
 
-    <?php print l("Edit", 'news/normal_edit/' . $node->nid);?>
+    <?php print l(t("Edit"), 'news/normal_edit/' . $node->nid);?>
     |
-    <?php print l("Delete", 'news/normal_delete/' . $node->nid);?>
+    <?php print l(t("Delete"), 'news/normal_delete/' . $node->nid);?>
 
   <?php endif?>
 </div>
